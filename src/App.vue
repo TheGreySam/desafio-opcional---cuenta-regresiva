@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h3>Elige la duración de la cuenta regresiva</h3>
+    <div>
+      <button class="btn btn-primary" @click="agregar5segundos">5 segundos</button>
+      <button class="btn btn-primary" @click="agregar10segundos">10 segundos</button>
+      <button class="btn btn-primary" @click="agregar15segundos">15 segundos</button>
+
+    </div>
+    <div class="card">
+  <div class="card-body text-dark">
+    <h2>cuenta</h2>
+  </div>
+</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
