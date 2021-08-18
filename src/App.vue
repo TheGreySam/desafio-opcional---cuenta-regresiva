@@ -17,9 +17,9 @@
   :key="$index">
     {{ textoCuenta }}
   </div>
-  <div v-if="distancia > 0">
-    {{`${horas}h ${minutos}m ${segundos}s`}}
-  </div>
+  <cuenta-regr></cuenta-regr>
+    <CuentaRegr></CuentaRegr>
+ 
   <div>
     <button class="btn btn-danger" style="width: 25%;" @click="iniciarCuenta"><h3>Iniciar!</h3></button>
   </div>
@@ -29,7 +29,7 @@
 
 <script>
 
-export default {
+//export default {
 //  name: 'App',
 //  el: "",
 //  data: () => ({
@@ -42,43 +42,51 @@ export default {
 //      this.nuevaCuenta = "cuenta regresiva";
 //    },
 //  },
-    name: 'CuentaRegresiva',
-    data () {
-      return {
-        horas: 0,
-        minutos: 0,
-        segundos: 0,
-      }
-    },
-    mounted(){
-      setInterval(this.actualizarCuenta,1000)
-    },
-    methods: {
-      updateCounter() {
-        let now = new Fecha();
-        let end = new Fecha(this.fechaEnd);
-        let distancia = end - now;
-        if(distancia > 0) {
-          this.horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          this.minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-          this.segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-        }else{
-          this.horas = 0;
-          this.minutos = 0;
-          this.segundos = 0;
-        }
-      }
 
-    }
+import CuentaRegr from "./components/CuentaRegr.vue";
+import CuentaRegr from "./components/CuentaRegr.vue";
 
-}
+//    name: 'CuentaRegresiva',
+//    data () {
+//      return {
+ //       horas: 0,
+//        minutos: 0,
+//        segundos: 0,
+//      }
+//    },
+//    mounted(){
+//    setInterval(this.actualizarCuenta,1000)
+//    },
+//    methods: {
+//      updateCounter() {
+//        let now = new Fecha();
+//        let end = new Fecha(this.fechaEnd);
+//        let distancia = end - now;
+//        if(distancia > 0) {
+//          this.horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//          this.minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+//          this.segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+//        }else{
+//          this.horas = 0;
+//          this.minutos = 0;
+//          this.segundos = 0;
+//        }
+//      }
+//
+//    }
+//
+//}
+
+
 </script>
 
 <style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -we
+  components: { CuentaRegr },bkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: g
+  components: { CuentaRegr },rayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
